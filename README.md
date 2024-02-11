@@ -1,19 +1,7 @@
 # banned_functions
 IDAPython script to check ELF &amp; PE/COFF for MS SDL banned.h policy violations and set breakpoints. Microsoft no longer maintains the banned.h header file, but it contains a good list of antiquated problematic functions:
 
-bannedList = (["strcpy", "strcpyA", "strcpyW", "wcscpy", "_tcscpy", "_mbscpy", "StrCpy",
-       "StrCpyA", "StrCpyW", "lstrcpy", "lstrcpyA", "lstrcpyW", "_tccpy", "_mbccpy",
-       "_ftcscpy", "strcat", "strcatA", "strcatW", "wcscat", "_tcscat", "_mbscat",
-       "StrCat", "StrCatA", "StrCatW", "lstrcat", "lstrcatA", "lstrcatW", "StrCatBuff",
-       "StrCatBuffA", "StrCatBuffW", "StrCatChainW", "_tccat", "_mbccat", "_ftcscat",
-       "sprintfW", "sprintfA", "wsprintf", "wsprintfW", "wsprintfA", "sprintf", "swprintf",
-       "_stprintf", "wvsprintf", "wvsprintfA", "wvsprintfW", "vsprintf", "_vstprintf",
-       "vswprintf", "strncpy", "wcsncpy", "_tcsncpy", "_mbsncpy", "_mbsnbcpy", "StrCpyN",
-       "StrCpyNA", "StrCpyNW", "StrNCpy", "strcpynA", "StrNCpyA", "StrNCpyW", "lstrcpyn",
-       "lstrcpynA", "lstrcpynW", "strncat", "wcsncat", "_tcsncat", "_mbsncat", "_mbsnbcat",
-       "StrCatN", "StrCatNA", "StrCatNW", "StrNCat", "StrNCatA", "StrNCatW", "lstrncat",
-       "lstrcatnA", "lstrcatnW", "lstrcatn", "gets", "_getts", "_gettws", "IsBadWritePtr",
-       "IsBadHugeWritePtr", "IsBadReadPtr", "IsBadHugeReadPtr", "IsBadCodePtr", "IsBadStringPtr"])
+bannedList = (["_fstrcat", "_fstrcpy", "_fstrncat", "_fstrncpy", "_ftccat", "_ftccpy", "_ftcscat", "_ftcscpy", "_getts", "_gettws", "_getws", "_itoa", "_i64toa", "_i64tow", "_mbccpy", "_mbscpy", "_mbsnbcpy", "_mbsnbcat", "_mbsncat", "_mbsncpy", "_mbstok", "_snprintf", "_sntprintf", "_sntscanf", "_snwprintf", "_splitpath", "_stprintf", "_stscanf", "_tccat", "_tccpy", "_tcscat", "_tcscpy", "_tcsncat", "_tcsncpy", "_tmakepath", "_tscanf", "_tsplitpath", "_ui64toa", "_ui64tow", "_ultoa", "CharToOemA", "CharToOemBuffA", "CharToOemBuffW", "CharToOemW", "OemToCharA", "OemToCharBuffA", "OemToCharBuffW", "OemToCharW", "StrCat", "StrCatA", "StrCatBuff", "StrCatBuffA", "StrCatBuffW", "StrCatChainW", "StrCatN", "StrCatNA", "StrCatNW", "StrCatW", "StrCpy", "StrCpyA", "StrCpyN", "StrCpyNA", "StrCpyNW", "strcpyW", "StrCpyW", "StrNCat", "StrNCatA", "StrNCatW", "StrNCpy", "StrNCpyA", "StrNCpyW", "gets", "lstrcat", "lstrcatA", "lstrcatn", "lstrcatnA", "lstrcatnW", "lstrcatW", "lstrcpy", "lstrcpyA", "lstrcpyn", "lstrcpynA", "lstrcpynW", "lstrcpyW", "lstrlen", "lstrlenA", "lstrlenW", "scanf", "sscanf", "snscanf", "snwscanf", "sprintf", "sprintfA", "sprintfW", "lstrncat", "makepath", "nsprintf", "strcat", "strcatA", "strcatW", "strcpy", "strcpyA", "strncat", "strncpy", "swprintf", "ualstrcpyW", "vsnprintf", "vsprintf", "vswprintf", "wcscat", "wcscpy", "wcsncat", "wcsncpy", "wnsprintf", "wnsprintfA", "wsprintf", "wsprintfA", "wsprintfW", "wmemcpy", "wscanf", "wnsprintfW", "ExAllocatePool", "ExAllocatePoolWithTag", "ExAllocatePoolWithQuota", "ExAllocatePoolWithQuotaTag", "ExAllocatePoolWithTagPriority", "MmMapIoSpace", "MmAllocateContiguousMemorySpecifyCache", "ExInitializeNPagedLookasideList", "MmAllocateContiguousMemorySpecifyCache"])
 
 This version was tested on Python 3.7.4 as Python 3.8 wasn't supported with IDAPython at the time the script was ported. 
 
