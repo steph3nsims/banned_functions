@@ -45,8 +45,25 @@ bpflag = 0
 codeflag = 0
 
 # Microsoft SDL banned.h list. Feel free to add/remove names.
-bannedList = (["_fstrcat", "_fstrcpy", "_fstrncat", "_fstrncpy", "_ftccat", "_ftccpy", "_ftcscat", "_ftcscpy", "_getts", "_gettws", "_getws", "_mbccat", "_makepath", "_mbscat", "_snprintf", "_sntprintf", "_sntscanf", "_snwprintf", "_splitpath", "_stprintf", "_stscanf", "_tccat", "_tccpy", "_tcscat", "_tcscpy", "_tcsncat", "_tcsncpy", "_tmakepath", "_tscanf", "_tsplitpath", "_vsnprintf", "_vsntprintf", "_vsnwprintf", "_vstprintf", "_wmakepath", "_wsplitpath", "OemToCharW", "StrCat", "StrCatA", "StrCatBuff", "StrCatBuffA", "StrCatBuffW", "StrCatChainW", "StrCatN", "StrCatNA", "StrCatNW", "StrCatW", "StrCpy", "StrCpyA", "StrCpyN", "StrCpyNA", "StrCpyNW", "strcpyW", "StrCpyW", "StrNCat", "StrNCatA", "StrNCatW", "StrNCpy", "StrNCpyA", "StrNCpyW", "gets", "lstrcat", "lstrcatA", "lstrcatn", "lstrcatnA", "lstrcatnW", "lstrcatW", "lstrcpy", "lstrcpyA", "lstrcpyn", "lstrcpynA", "lstrcpynW", "lstrcpyW", "snscanf", "snwscanf", "sprintf", "sprintfA", "sprintfW", "lstrncat", "makepath", "nsprintf", "strcat", "strcatA", "strcatW", "strcpy", "strcpyA", "strncat", "strncpy", "swprintf", "ualstrcpyW", "vsnprintf", "vsprintf", "vswprintf", "wcscat", "wcscpy", "wcsncat", "wcsncpy", "wnsprintf", "wnsprintfA", "wsprintf", "wsprintfA", "wsprintfW", "wvnsprintf", "wvnsprintfA", "wvnsprintfW", "wvsprintf", "wvsprintfA", "wvsprintfW", "_mbscpy", "_mbccpy", "_mbsncpy", "_mbsnbcpy", "_mbsncat", "_mbsnbcat", "IsBadWritePtr", "IsBadHugeWritePtr", "IsBadReadPtr", "IsBadHugeReadPtr", "IsBadCodePtr", "IsBadStringPtr"])
-
+bannedList = (["_fstrcat", "_fstrcpy", "_fstrncat", "_fstrncpy", "_ftccat", "_ftccpy", 
+               "_ftcscat", "_ftcscpy", "_getts", "_gettws", "_getws", "_mbccat", "_makepath", 
+               "_mbscat", "_snprintf", "_sntprintf", "_sntscanf", "_snwprintf", "_splitpath", 
+               "_stprintf", "_stscanf", "_tccat", "_tccpy", "_tcscat", "_tcscpy", "_tcsncat", 
+               "_tcsncpy", "_tmakepath", "_tscanf", "_tsplitpath", "_vsnprintf", "_vsntprintf", 
+               "_vsnwprintf", "_vstprintf", "_wmakepath", "_wsplitpath", "OemToCharW", "StrCat", 
+               "StrCatA", "StrCatBuff", "StrCatBuffA", "StrCatBuffW", "StrCatChainW", "StrCatN", 
+               "StrCatNA", "StrCatNW", "StrCatW", "StrCpy", "StrCpyA", "StrCpyN", "StrCpyNA", 
+               "StrCpyNW", "strcpyW", "StrCpyW", "StrNCat", "StrNCatA", "StrNCatW", "StrNCpy", 
+               "StrNCpyA", "StrNCpyW", "gets", "lstrcat", "lstrcatA", "lstrcatn", "lstrcatnA", 
+               "lstrcatnW", "lstrcatW", "lstrcpy", "lstrcpyA", "lstrcpyn", "lstrcpynA", "lstrcpynW", 
+               "lstrcpyW", "snscanf", "snwscanf", "sprintf", "sprintfA", "sprintfW", "lstrncat", 
+               "makepath", "nsprintf", "strcat", "strcatA", "strcatW", "strcpy", "strcpyA", "strncat", 
+               "strncpy", "swprintf", "ualstrcpyW", "vsnprintf", "vsprintf", "vswprintf", "wcscat", 
+               "wcscpy", "wcsncat", "wcsncpy", "wnsprintf", "wnsprintfA", "wsprintf", "wsprintfA", 
+               "wsprintfW", "wvnsprintf", "wvnsprintfA", "wvnsprintfW", "wvsprintf", "wvsprintfA", 
+               "wvsprintfW", "_mbscpy", "_mbccpy", "_mbsncpy", "_mbsnbcpy", "_mbsncat", "_mbsnbcat", 
+               "IsBadWritePtr", "IsBadHugeWritePtr", "IsBadReadPtr", "IsBadHugeReadPtr", "IsBadCodePtr", 
+               "IsBadStringPtr"])
 
 def iatCallback(addr, name, ord):   # Don't care about ord, but required for enum_import_names
     global bpflag, codeflag, checked, bannedList  # Function got a bit out of hand. Sorry.
